@@ -1,0 +1,28 @@
+{
+  "environments": {
+    "tgif test": "2080566d-d7d7-4ca2-a6d8-670de3ab335b",
+    "Test Environment": "408207af-b56f-4d2f-a874-6e0ac3cbfdd0"
+  },
+  "assets": {
+    "contentLayouts": [
+      {
+        "id": 1376,
+        "projectPath": "content-types/2 Image Gallery - Sample Site/text-html"
+      }
+    ],
+    "pageLayouts": [
+      {
+        "id": 2058,
+        "headerCode": "page-layouts/Catalog Builder - Sample Site/headerCode",
+        "footerCode": "page-layouts/Catalog Builder - Sample Site/footerCode"
+      }
+    ],
+    "media": [
+      {
+        "id": 845,
+        "description": "dashboard.css",
+        "projectPath": "medias/Categorised/Dashboard/css/dashboard.css"
+      }
+    ]
+  }
+}

@@ -1,0 +1,47 @@
+{{#firstInSequence}}
+<section class="gallery-banner double-padding-divider-xl single-padding-divider  ">
+  <div class="container-fluid container-t4">
+    <div class="row">
+      <div class="col-12">
+{{/firstInSequence}}            
+        
+        
+<div class="gallery-banner__{{#each (list element="Image Row Type")}}{{#if selected}}{{value}}{{/if}}{{/each}}-block">
+    <div class="gallery-banner__item gallery-banner__{{#each (list element="Image Row Type")}}{{#if selected}}{{value}}{{/if}}{{/each}}-block__item">
+        {{{media id=(mediaId element="Small Image") layout="image/*"}}}
+    </div>
+    <div class="gallery-banner__item gallery-banner__{{#each (list element="Image Row Type")}}{{#if selected}}{{value}}{{/if}}{{/each}}-block__item bg-white">
+        <h2 class="gallery-banner__item-title">
+            <span>{{publish element="Heading" inline-edit="true"}}</span>
+        </h2>
+      
+        {{#ifSet element="CTA Text"~}}
+      	{{#eq (selectedNames element="Link Type") "Internal"~}}
+        	<a class="gallery-banner__item-link" href="{{#link element="CTA Link (internal)" }}{{linkUrl}}{{/link}}">
+          {{~/eq}}
+          {{#eq (selectedNames element="Link Type") "External"~}}
+          	<a class="gallery-banner__item-link" href="{{publish element="CTA Link (external)"}}">
+          {{~/eq}}
+          {{#eq (selectedNames element="Link Type") "Media"~}}
+            <a class="gallery-banner__item-link" href="{{{media id=(mediaId element="CTA Link (media)") layout="path/*"}}}">
+          {{~/eq}}
+            {{publish element="CTA Text" inline-edit="true"}}
+            <svg class="svg-md-18px" focusable="false" aria-hidden="true">
+              <title>More info</title>
+              <use xlink:href="{{{media id="22" layout="path/*"}}}#ic_arrow_forward_18px"></use>
+            </svg>
+            </a>
+          {{~/ifSet}}
+    </div>
+    <div class="gallery-banner__item gallery-banner__{{#each (list element="Image Row Type")}}{{#if selected}}{{value}}{{/if}}{{/each}}-block__item">
+        {{{media id=(mediaId element="Large Image") layout="image/*"}}}
+    </div>
+</div>
+        
+        
+{{#lastInSequence}}        
+   	  </div>
+    </div>
+  </div>
+</section>      
+{{/lastInSequence}}
